@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        News
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="card-background-page">
+  
+    <ion-card *ngFor="let item of NewsListing" >
+      <img src="/assets/images/card-saopaolo.png"/>
+      <div class="card-title">{{item.EnglishTitle}}</div>
+      <div class="card-subtitle">{{item.EnglishDescription}}</div>
+    </ion-card>
+
+    </ion-content>
+
+  

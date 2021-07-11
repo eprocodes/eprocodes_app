@@ -1,0 +1,8 @@
+{
+  "name": "eProCodes",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

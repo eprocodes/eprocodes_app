@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Contact Us
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div style="height:100%;background-image:url('assets/images/white-brick-wall-background-vector-22957875.jpg')">
+  <button (click)="takePic()">Take Pic</button>
+  <img *ngIf="image" [src]="image" />
+
+
+  <div id="currentBox" class="example-box" cdkDrag>
+    <img style="width:100%;height:100%" src="assets/images/images.jpg" />
+    <a href="javascript:;" (click)="resizeBox('zoomin')">
+      zoom in
+    </a>
+    <a href="javascript:;" (click)="resizeBox('zoomout')">
+      zoom out
+    </a>
+  </div>
+</div>
+</ion-content>
