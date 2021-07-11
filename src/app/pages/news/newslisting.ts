@@ -13,6 +13,7 @@ export class NewsListing implements OnInit {
 
   ngOnInit() {
     this.getNews();
+    this.getUsername();
   }
 
   getNews() {
@@ -20,6 +21,17 @@ export class NewsListing implements OnInit {
       if (res != null) {
         console.log(res);
         this.NewsListing = res;
+      }
+    },
+      err => {
+        console.error('this.getDocument error:', err);
+        // this.loading = false;
+      });
+  }
+  getUsername() {
+    this.httpRequest.Get('getusername').subscribe(res => {
+      if (res != null) {
+        console.log(res);
       }
     },
       err => {
