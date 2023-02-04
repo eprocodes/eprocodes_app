@@ -13,12 +13,15 @@ import { AppComponent } from './app.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { NewsListing } from './pages/news/newslisting';
 import { HeaderComponent } from './masterpages/header/header.component';
+import { CreateNews } from './pages/createNews/createNews';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsListing,
+    CreateNews,
     HeaderComponent],
   entryComponents: [],
   imports: [
@@ -27,6 +30,9 @@ import { HeaderComponent } from './masterpages/header/header.component';
     AppRoutingModule,
     DragDropModule,
     HttpClientModule,
+    FormsModule,
+    IonicModule,
+    ReactiveFormsModule,
     HttpModule
   ],
   providers: [
