@@ -12,10 +12,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { NewsListing } from './pages/news/newslisting';
+import { HeaderComponent } from './masterpages/header/header.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent,NewsListing],
+  declarations: [
+    AppComponent,
+    NewsListing,
+    HeaderComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 

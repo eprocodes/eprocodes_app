@@ -1,11 +1,7 @@
-<ion-header>
-    <ion-toolbar>
-      <ion-title>
-        News
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
+<ion-header class="bar bar-stable" title="News" cache-view="false">
+  <app-header-page [pageTitle]="News"></app-header-page>
+</ion-header>
+
   <ion-content class="card-background-page">
   
     <ion-card *ngFor="let item of NewsListing" >

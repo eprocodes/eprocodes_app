@@ -1,0 +1,17 @@
+
+    <ion-toolbar [ngClass]="{'hide-back-button': hideBackButton}">
+        <ion-buttons left>
+            <button menuToggle menu-toggle="left" ng-show="true" class="button button-icon icon ion-navicon" title="menu" tabindex="0"
+                show ion-button icon-only>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title class="title">{{pageTitle}}</ion-title>
+        <ion-buttons right>
+            <button menu-toggle="left" (click)="goTo('HomepageComponent')" class="button button-icon icon ion-gear-b" title="Settings"
+                tabindex="0" ion-button icon-only>
+                <ion-icon name="home"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+
