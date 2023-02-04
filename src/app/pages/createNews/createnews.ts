@@ -24,7 +24,8 @@ export class CreateNews implements OnInit {
   
     constructor(
       public formBuilder: FormBuilder,
-      private router: Router
+      private router: Router,
+      public httpRequest: HttpRequestsService
     ) { }
   
     ngOnInit() {
@@ -123,7 +124,18 @@ export class CreateNews implements OnInit {
   
     onSubmit(values){
       console.log(values);
-      this.router.navigate(["/user"]);
+      this.httpRequest.Post('postnews',values).subscribe(res => {
+        if (res != null) {
+          console.log(res);
+          this.router.navigate(["/newslisting"]);
+        }
+      },
+        err => {
+          console.error('this.getDocument error:', err);
+          alert(err)
+          // this.loading = false;
+        });
+      
     }
  
 
