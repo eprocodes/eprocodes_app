@@ -15,6 +15,7 @@ import { NewsListing } from './pages/news/newslisting';
 import { HeaderComponent } from './masterpages/header/header.component';
 import { CreateNews } from './pages/createNews/createNews';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Login } from './pages/login/login';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     NewsListing,
     CreateNews,
+    Login,
     HeaderComponent],
   entryComponents: [],
   imports: [
