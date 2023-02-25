@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpRequestsService } from 'src/app/services/HttpRequestServices';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class Login implements OnInit {
     
-    constructor( public httpRequest: HttpRequestsService, private router: Router,  public formBuilder: FormBuilder, private alertController: AlertController) {}
+    constructor( private loadingCtrl: LoadingController, public httpRequest: HttpRequestsService, private router: Router,  public formBuilder: FormBuilder, private alertController: AlertController) {}
     login_form: FormGroup;
   
     ngOnInit() {
@@ -24,6 +24,7 @@ export class Login implements OnInit {
 
     onSubmit(values){
       console.log(values);
+      this.showLoading();
       this.httpRequest.Post('login',values).subscribe(res => {
         if (res != null) {
           console.log(res);
@@ -50,5 +51,15 @@ export class Login implements OnInit {
       });
   
       await alert.present();
+    }
+
+    async showLoading() {
+      const loading = await this.loadingCtrl.create({
+        message: 'Loading...',
+        duration: 3000,
+        spinner: 'circles',
+      });
+  
+      loading.present();
     }
 }

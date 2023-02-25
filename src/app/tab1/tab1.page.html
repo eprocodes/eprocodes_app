@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Home
+      <img src="/assets/images/eProCoding-logo2-Black.png" />
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
+    <!-- <ion-card style="background-color: #f3f2f2;" class="welcome-card">
       <img class="padding-30" src="/assets/images/eProCoding-logo-Black.png" alt="" />
       <ion-card-header>
         <ion-card-subtitle></ion-card-subtitle>
@@ -16,7 +16,19 @@
       <ion-card-content>
         <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
       </ion-card-content>
-    </ion-card>
+    </ion-card> -->
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide style="background: url(https://www.eprocodes.com/wp-content/uploads/2022/07/mobile-web-app-development.jpg);
+      background-repeat: no-repeat;
+      background-position: -825px;">
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
     <ion-list lines="none">
       <ion-list-header>
         <ion-label>Quick Links</ion-label>
