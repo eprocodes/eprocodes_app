@@ -16,8 +16,14 @@ export class HttpRequestsService {
 		return this.httpClient.post<any>(this.baseUrl + endUrl, param, { headers: this.prepareHeaders() });
 	}
 
+	public CustomPost(endUrl: string, param: any) {
+		return this.httpClient.post<any>(endUrl, param, { headers: this.prepareHeaders() });
+	}
+
     private prepareHeaders(): HttpHeaders {
-		const headersObject = {};
+		const headersObject = {
+			'Authorization': 'Bearer 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'
+		};
 		return new HttpHeaders(headersObject);
 	}
 

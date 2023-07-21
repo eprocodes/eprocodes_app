@@ -13,9 +13,10 @@ import { AppComponent } from './app.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { NewsListing } from './pages/news/newslisting';
 import { HeaderComponent } from './masterpages/header/header.component';
-import { CreateNews } from './pages/createNews/createNews';
+import { CreateNews } from './pages/createNews/createnews';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Login } from './pages/login/login';
+import { Chat } from './pages/chat/chat';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { Login } from './pages/login/login';
     NewsListing,
     CreateNews,
     Login,
+    Chat,
     HeaderComponent],
   entryComponents: [],
   imports: [

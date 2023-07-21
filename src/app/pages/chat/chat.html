@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Chat</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="chat-content">
+    <ion-list class="chat-list" lines="none">
+      <ion-item *ngFor="let message of messages" [class]="message.isUser ? 'user-message' : 'bot-message'">
+        <img *ngIf="message.isUser" class="icon-image" src="../../../assets/images/humanicon.png" />
+        <ion-label class="message-text">{{ message.text }}
+        </ion-label>
+        <img *ngIf="!message.isUser" class="icon-image" src="../../../assets/images/boticon.png" />
+      </ion-item>
+      <ion-item *ngIf="showLoader" class="bot-message-loader padding-8">
+        <ion-label class="loader-image message-text">
+        </ion-label>
+     </ion-item>
+    </ion-list>
+  </ion-content>
+  
+  <ion-footer class="chat-footer">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon name="attach"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-input [(ngModel)]="newMessage" placeholder="Type a message..." class="message-input"></ion-input>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="camera"></ion-icon>
+        </ion-button>
+        <ion-button (click)="sendMessage()">
+          <ion-icon name="send"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+  

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CreateNews } from './pages/createNews/createNews';
+import { CreateNews } from './pages/createNews/createnews';
 import { Login } from './pages/login/login';
 import { NewsListing } from './pages/news/newslisting';
+import { Chat } from './pages/chat/chat';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'newslisting', component: NewsListing },
   { path: 'createnews', component: CreateNews },
   { path: 'login', component: Login },
+  { path: 'chat', component: Chat },
 ];
 @NgModule({
   imports: [
